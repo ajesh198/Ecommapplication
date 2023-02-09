@@ -30,8 +30,7 @@ namespace Ecommapplication
                 string logtype = connection.Fun_scalar(utype);
                 if(logtype == "Admin")
                 {
-                    errmsg.Text = "admin";
-                    errmsg.Visible = true;
+                    Response.Redirect("adminpage.aspx");
                 }
                 else
                 {

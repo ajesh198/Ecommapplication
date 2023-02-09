@@ -116,10 +116,12 @@
     <Content Include="assets\js\owl.carousel.min.js" />
     <Content Include="assets\logo\favicon.png" />
     <Content Include="assets\logo\logo.png" />
+    <Content Include="categoryadd.aspx" />
     <Content Include="flipkart_sale_banner.jpeg" />
     <Content Include="homepage.aspx" />
     <Content Include="index.html" />
     <Content Include="login.aspx" />
+    <Content Include="Productadd.aspx" />
     <Content Include="register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -138,6 +140,13 @@
     <Compile Include="adminpage.aspx.designer.cs">
       <DependentUpon>adminpage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="categoryadd.aspx.cs">
+      <DependentUpon>categoryadd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="categoryadd.aspx.designer.cs">
+      <DependentUpon>categoryadd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="connectionclass.cs" />
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
@@ -152,6 +161,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Productadd.aspx.cs">
+      <DependentUpon>Productadd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Productadd.aspx.designer.cs">
+      <DependentUpon>Productadd.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="register.aspx.cs">
