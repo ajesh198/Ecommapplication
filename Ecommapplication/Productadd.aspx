@@ -19,7 +19,7 @@
                 <asp:Label ID="Label2" runat="server" Text="Category Id"></asp:Label>
             </td>
             <td>
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
                 </asp:DropDownList>
             </td>
         </tr>

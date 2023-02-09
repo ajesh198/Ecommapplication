@@ -1,28 +1,44 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="adminpage.aspx.cs" Inherits="Ecommapplication.adminpage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            width: 393px;
+        }
+        .auto-style2 {
+            width: 393px;
+            height: 22px;
+        }
+        .auto-style3 {
+            height: 22px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="nav-justified">
         <tr>
-            <td>
+            <td class="auto-style1">
                 <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True" ForeColor="Blue" Height="22px" NavigateUrl="~/categoryadd.aspx">Add  a category</asp:HyperLink>
             </td>
             <td>
                 <asp:HyperLink ID="HyperLink2" runat="server" Font-Underline="True" ForeColor="Blue" NavigateUrl="~/Productadd.aspx">Add a product</asp:HyperLink>
             </td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
             <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style1">
                 <asp:Label ID="Label1" runat="server" Font-Size="X-Large" ForeColor="Red" Text="Category"></asp:Label>
             </td>
             <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>
+            <td class="auto-style1">
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
                     <Columns>
                         <asp:BoundField DataField="catid" HeaderText="Cat Id" />
@@ -36,19 +52,44 @@
                 </asp:GridView>
             </td>
             <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
+            <td class="auto-style1">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>
+            <td class="auto-style1">
                 <asp:Label ID="Label2" runat="server" Font-Size="X-Large" ForeColor="Red" Text="Product"></asp:Label>
             </td>
             <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>
+            <td class="auto-style1">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">
+                <asp:Label ID="Label3" runat="server" Text="Category"></asp:Label>
+            </td>
+            <td class="auto-style3">
+                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                </asp:DropDownList>
+            </td>
+            <td class="auto-style3">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style1">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style1">
                 <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False">
                     <Columns>
                         <asp:BoundField DataField="proid" HeaderText="Prod Id"></asp:BoundField>
@@ -62,6 +103,7 @@
                     </Columns>
                 </asp:GridView>
             </td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
     </table>

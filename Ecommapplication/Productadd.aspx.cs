@@ -13,12 +13,15 @@ namespace Ecommapplication
         connectionclass connection = new connectionclass();
         protected void Page_Load(object sender, EventArgs e)
         {
-            string drop = "select catid,name from category";
-            DataSet dr = connection.Fun_dataadapter(drop);
-            DropDownList1.DataSource = dr;
-            DropDownList1.DataTextField = "name";
-            DropDownList1.DataValueField = "catid";
-            DropDownList1.DataBind();
+            if (!IsPostBack) {
+                string drop = "select catid,name from category";
+                DataSet dr = connection.Fun_dataadapter(drop);
+                DropDownList1.DataSource = dr;
+                DropDownList1.DataTextField = "name";
+                DropDownList1.DataValueField = "catid";
+                DropDownList1.DataBind();
+                DropDownList1.Items.Insert(0, "--Select--");
+            }
 
         }
 
