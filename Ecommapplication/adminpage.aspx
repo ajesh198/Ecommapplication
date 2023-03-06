@@ -90,7 +90,7 @@
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False">
+                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="proid" OnRowCancelingEdit="GridView2_RowCancelingEdit" OnRowDeleting="GridView2_RowDeleting" OnRowEditing="GridView2_RowEditing" OnRowUpdating="GridView2_RowUpdating">
                     <Columns>
                         <asp:BoundField DataField="proid" HeaderText="Prod Id"></asp:BoundField>
                         <asp:BoundField DataField="name" HeaderText="Name"></asp:BoundField>
@@ -100,6 +100,12 @@
                         <asp:BoundField DataField="description" HeaderText="Description"></asp:BoundField>
                         <asp:BoundField DataField="status" HeaderText="Status"></asp:BoundField>
                         <asp:BoundField DataField="stock" HeaderText="Stock"></asp:BoundField>
+                        <asp:CommandField ShowDeleteButton="True">
+                        <ControlStyle ForeColor="Red" />
+                        </asp:CommandField>
+                        <asp:CommandField ButtonType="Button" ShowEditButton="True">
+                        <ControlStyle BackColor="Green" ForeColor="White" />
+                        </asp:CommandField>
                     </Columns>
                 </asp:GridView>
             </td>

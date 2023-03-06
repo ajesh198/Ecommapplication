@@ -45,7 +45,7 @@ namespace Ecommapplication
                 int j = connection.Fun_nonquery(log);
                 if (i != 0 && j != 0)
                 {
-                    Response.Redirect("adminregister.aspx");
+                    Response.Redirect("login.aspx");
                 }
             }
         }

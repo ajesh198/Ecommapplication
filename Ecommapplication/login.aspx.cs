@@ -34,8 +34,7 @@ namespace Ecommapplication
                 }
                 else
                 {
-                    errmsg.Text = "user";
-                    errmsg.Visible = true;
+                    Response.Redirect("Userhome.aspx");
                 }
             }
             else

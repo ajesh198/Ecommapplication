@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Configuration;
 
 namespace Ecommapplication
 {
@@ -13,7 +14,10 @@ namespace Ecommapplication
         SqlCommand cmd;
         public connectionclass()
         {
-            con = new SqlConnection(@"server=DESKTOP-EA0OJCK\SQLEXPRESS;database=ecomm;Integrated security=true");
+            string strcon = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
+            //create new sqlconnection and connection to database by using connection string from web.config file  
+            con = new SqlConnection(strcon);
+            //con = new SqlConnection(@"server=DESKTOP-EA0OJCK\SQLEXPRESS;database=ecomm;Integrated security=true");
         }
         public int Fun_nonquery(String sqlquery)
         {

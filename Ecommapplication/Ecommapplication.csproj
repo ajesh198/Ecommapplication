@@ -117,13 +117,17 @@
     <Content Include="assets\logo\favicon.png" />
     <Content Include="assets\logo\logo.png" />
     <Content Include="categoryadd.aspx" />
+    <Content Include="detailsview.aspx" />
     <Content Include="flipkart_sale_banner.jpeg" />
     <Content Include="homepage.aspx" />
     <Content Include="index.html" />
     <Content Include="login.aspx" />
     <Content Include="Productadd.aspx" />
+    <Content Include="productview.aspx" />
     <Content Include="register.aspx" />
+    <Content Include="Userhome.aspx" />
     <Content Include="Web.config" />
+    <Content Include="cartpage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="adminregister.aspx.cs">
@@ -148,6 +152,13 @@
       <DependentUpon>categoryadd.aspx</DependentUpon>
     </Compile>
     <Compile Include="connectionclass.cs" />
+    <Compile Include="detailsview.aspx.cs">
+      <DependentUpon>detailsview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detailsview.aspx.designer.cs">
+      <DependentUpon>detailsview.aspx</DependentUpon>
+    </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -169,6 +180,13 @@
     <Compile Include="Productadd.aspx.designer.cs">
       <DependentUpon>Productadd.aspx</DependentUpon>
     </Compile>
+    <Compile Include="productview.aspx.cs">
+      <DependentUpon>productview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="productview.aspx.designer.cs">
+      <DependentUpon>productview.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="register.aspx.cs">
       <DependentUpon>register.aspx</DependentUpon>
@@ -183,6 +201,20 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Userhome.aspx.cs">
+      <DependentUpon>Userhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Userhome.aspx.designer.cs">
+      <DependentUpon>Userhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cartpage.aspx.cs">
+      <DependentUpon>cartpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cartpage.aspx.designer.cs">
+      <DependentUpon>cartpage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -203,6 +235,7 @@
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <Content Include="README.md" />
+    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
