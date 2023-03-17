@@ -4,10 +4,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="cartid" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" ShowFooter="True">
         <Columns>
-            <asp:BoundField DataField="proid" HeaderText="Product Id" />
+            <asp:BoundField DataField="proid" HeaderText="Product Id" ReadOnly="True" />
             <asp:BoundField DataField="quantity" HeaderText="Quantity" />
             <asp:BoundField DataField="price" HeaderText="price" />
-            <asp:BoundField DataField="totalprice" HeaderText="Total Price" />
+            <asp:BoundField DataField="totalprice" HeaderText="Total Price" ReadOnly="True" />
             <asp:CommandField ShowDeleteButton="True" />
             <asp:CommandField ShowEditButton="True" />
         </Columns>

@@ -62,9 +62,15 @@ namespace Ecommapplication
             int id = Convert.ToInt32(GridView1.DataKeys[i].Value);
 
             TextBox txtquantity = (TextBox)GridView1.Rows[i].Cells[1].Controls[0];
+            TextBox txtprice = (TextBox)GridView1.Rows[i].Cells[2].Controls[0];
 
+            int tot = Convert.ToInt32(txtquantity.Text) * Convert.ToInt32(txtprice.Text);
 
-            //string upd = "update cart set quantity="+txtquantity+", totalprice="
+            string upd = "update cart set quantity=" + txtquantity.Text + ", totalprice=" + tot + " where cartid=" + id + "";
+            int u = connection.Fun_nonquery(upd);
+
+            GridView1.EditIndex = -1;
+            Bind_grid();
         }
     }
 }
