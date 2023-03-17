@@ -28,7 +28,7 @@ namespace Ecommapplication
 
                 string utype = "select logtype from login where username='" + usertxt.Text + "' and password='" + pwdtxt.Text + "'";
                 string logtype = connection.Fun_scalar(utype);
-                if(logtype == "Admin")
+                if(logtype == "admin")
                 {
                     Response.Redirect("adminpage.aspx");
                 }

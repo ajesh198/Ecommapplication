@@ -30,7 +30,8 @@ namespace Ecommapplication
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string ca = "insert into cart values("+Session["proid"]+","+TextBox1.Text+","+Label4.Text+ ",'pending',"+Session["userid"]+")";
+            int sum = Convert.ToInt32(TextBox1.Text) * Convert.ToInt32(Label4.Text);
+            string ca = "insert into cart values("+Session["proid"]+","+ TextBox1.Text + ","+ Label4.Text + ",'pending',"+Session["userid"]+ "," + sum + ")";
             int c = connection.Fun_nonquery(ca);
             if (c != 0)
             {
