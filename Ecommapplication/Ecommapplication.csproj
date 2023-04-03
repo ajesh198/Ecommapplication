@@ -122,9 +122,11 @@
     <Content Include="homepage.aspx" />
     <Content Include="index.html" />
     <Content Include="login.aspx" />
+    <Content Include="orderpage.aspx" />
     <Content Include="Productadd.aspx" />
     <Content Include="productview.aspx" />
     <Content Include="register.aspx" />
+    <Content Include="sucesspage.aspx" />
     <Content Include="Userhome.aspx" />
     <Content Include="Web.config" />
     <Content Include="cartpage.aspx" />
@@ -173,6 +175,13 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="orderpage.aspx.cs">
+      <DependentUpon>orderpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="orderpage.aspx.designer.cs">
+      <DependentUpon>orderpage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Productadd.aspx.cs">
       <DependentUpon>Productadd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,6 +210,13 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="sucesspage.aspx.cs">
+      <DependentUpon>sucesspage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sucesspage.aspx.designer.cs">
+      <DependentUpon>sucesspage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Userhome.aspx.cs">
       <DependentUpon>Userhome.aspx</DependentUpon>

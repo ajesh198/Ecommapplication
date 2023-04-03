@@ -13,6 +13,7 @@
         </Columns>
         <FooterStyle BackColor="Yellow" />
     </asp:GridView>
+    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Proceed to  Order" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 </asp:Content>

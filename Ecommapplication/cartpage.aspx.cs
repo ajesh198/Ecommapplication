@@ -13,7 +13,7 @@ namespace Ecommapplication
         connectionclass connection = new connectionclass();
        public void Bind_grid()
         {
-            string ca = "select * from cart where regid=" + Session["userid"] + "";
+            string ca = "select * from cart where regid=" + Session["userid"] + " and status='pending'";
             DataSet cart = connection.Fun_dataadapter(ca);
             GridView1.DataSource = cart;
             GridView1.DataBind();
@@ -71,6 +71,13 @@ namespace Ecommapplication
 
             GridView1.EditIndex = -1;
             Bind_grid();
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string ord = "insert into  order_table values(" + GridView1.FooterRow.Cells[3].Text+ ",'pending'," + Session["userid"] + ")";
+            int o = connection.Fun_nonquery(ord);
+            Response.Redirect("orderpage.aspx");
         }
     }
 }
