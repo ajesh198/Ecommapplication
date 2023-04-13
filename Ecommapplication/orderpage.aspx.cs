@@ -25,11 +25,14 @@ namespace Ecommapplication
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string upd = "update order_table set status='completed'";
-            int u = connection.Fun_nonquery(upd);
-            string car = "update cart set status='completed'";
-            int c = connection.Fun_nonquery(car);
-            Response.Redirect("sucesspage.aspx");
+            Ecommservice.ServiceClient obj = new Ecommservice.ServiceClient();
+            string s = obj.status();
+            Label5.Text = s;
+            //string upd = "update order_table set status='completed'";
+            //int u = connection.Fun_nonquery(upd);
+            //string car = "update cart set status='completed'";
+            //int c = connection.Fun_nonquery(car);
+            //Response.Redirect("sucesspage.aspx");
         }
     }
 }

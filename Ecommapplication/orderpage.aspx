@@ -45,7 +45,9 @@
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
+                    </td>
                 </tr>
             </table>
         </div>
